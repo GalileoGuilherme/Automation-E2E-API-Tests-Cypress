@@ -10,9 +10,9 @@ module.exports = defineConfig({
     },
 
     // Tempo máximo de espera para as ações
-    defaultCommandTimeout: 10000,
+    // defaultCommandTimeout: 10000,
 
     // Tempo máximo de espera para as páginas carregarem
-    pageLoadTimeout: 60000,
+    // pageLoadTimeout: 60000,
   },
 });

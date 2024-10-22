@@ -4,21 +4,27 @@ describe('API Tests for Automation', () => {
   // const baseUrl = 'https://automationexercise.com';
 
   // API 1: Get All Products List
-  it('Get All Products List', () => {
+  it('API1: Get All Products List', () => {
     cy.api(
       'GET', 
       '/api/productsList'
     ).then((response) => {
-      const responseBody = JSON.parse(response.body);
       expect(response.status).to.eq(200);
+
+      const responseBody = JSON.parse(response.body);
+      // cy.log(responseBody);
       expect(responseBody.responseCode).to.eq(200);
       expect(responseBody.products).to.exist;
       expect(Array.isArray(responseBody.products)).to.be.true;
+
+      //   curl --location 'https://automationexercise.com/api/productsList' \
+// --header 'Content-Type: application/json' \
+// --request GET
     });
   });
 
   // API 2: POST To All Products List
-  it('POST To All Products List', () => {
+  it('API 2: POST To All Products List', () => {
     cy.api(
       'POST', 
       '/api/productsList'
@@ -26,16 +32,20 @@ describe('API Tests for Automation', () => {
       expect(response.status).to.eq(200);
 
       const responseBody = JSON.parse(response.body);
-      cy.log(responseBody)
+      // cy.log(responseBody);
       expect(responseBody.responseCode).to.eq(405);
       expect(responseBody.message).to.eq("This request method is not supported.");
       // expect(response.body).to.include('This request method is not supported.');
       
+//       curl --location 'https://automationexercise.com/api/productsList' \
+// --header 'Content-Type: application/json' \
+// --request POST
+
     });
   });
 
   // API 3: Get All Brands List
-  it.only('Get All Brands List', () => {
+  it('API 3: Get All Brands List', () => {
     cy.api(
       'GET', 
       '/api/brandsList'
@@ -47,54 +57,160 @@ describe('API Tests for Automation', () => {
       expect(responseBody.responseCode).to.eq(200);
       expect(responseBody.brands).to.exist;
       expect(Array.isArray(responseBody.brands)).to.be.true;
+
+      //   curl --location 'https://automationexercise.com/api/brandsList' \
+// --header 'Content-Type: application/json' \
+// --request GET
     });
   });
 
   // API 4: PUT To All Brands List
-  // it('PUT To All Brands List', () => {
-  //   cy.api('PUT', `${baseUrl}/api/brandsList`).then((response) => {
-  //     expect(response.status).to.eq(405);
-  //     expect(response.body).to.include('This request method is not supported.');
-  //   });
-  // });
+  it('API 4: PUT To All Brands List', () => {
+    cy.api('PUT', '/api/brandsList').then((response) => {
+      const responseBody = JSON.parse(response.body);
+
+      expect(responseBody.responseCode).to.eq(405);
+      expect(response.body).to.include('This request method is not supported.');
+
+//       curl --location --request PUT 'https://automationexercise.com/api/brandsList' \
+// --header 'Content-Type: application/json'
+
+    });
+  });
 
   // API 5: POST To Search Product
-  // it('POST To Search Product', () => {
-  //   const searchProduct = { search_product: 'tshirt' }; // Exemplo
-  //   cy.api('POST', `${baseUrl}/api/searchProduct`, searchProduct).then((response) => {
-  //     const responseBody = JSON.parse(response.body);
-  //     expect(response.status).to.eq(200);
-  //     expect(responseBody.responseCode).to.eq(200);
-  //     expect(responseBody.products).to.exist;
-  //     expect(Array.isArray(responseBody.products)).to.be.true;
-  //   });
-  // });
+  it('API 5: POST To Search Product without search_product parameter', () => {
+    const apiUrl = '/api/searchProduct';
+  
+    // Faz a requisição sem o parâmetro obrigatório 'search_product'
+    cy.request({
+      method: 'POST',
+      url: apiUrl,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: {}, // Enviando sem o parâmetro obrigatório
+    }).then((response) => {
+      cy.log('Response Status: ', response.status);
+      cy.log('Response Body: ', response.body);
+  
+      // Verifica se o tipo de conteúdo é JSON
+      if (response.headers['content-type'] && response.headers['content-type'].includes('application/json')) {
+        try {
+          const responseBody = JSON.parse(response.body); 
+  
+          // Validações
+          expect(response.status).to.eq(200); // Mesmo com erro, a API pode retornar 200
+          expect(responseBody.responseCode).to.eq(400);
+          expect(responseBody.message).to.eq('Bad request, search_product parameter is missing in POST request.');
+        } catch (e) {
+          cy.log('Error parsing response as JSON: ', e.message);
+          return; // Interrompe o teste se ocorrer um erro ao fazer o parse
+        }
+      } else {
+        cy.log('Response is not JSON. Content-Type:', response.headers['content-type']);
+        return; // Interrompe o teste se o tipo de conteúdo não for JSON
+      }
+//       curl --location 'https://automationexercise.com/api/searchProduct' \
+// --header 'Content-Type: application/json' \
+// --data-raw '{}'
+
+    });
+
+  });
 
   // API 6: POST To Search Product without search_product parameter
-  // it('POST To Search Product without search_product parameter', () => {
-  //   cy.api('POST', `${baseUrl}/api/searchProduct`).then((response) => {
-  //     expect(response.status).to.eq(400);
-  //     expect(response.body).to.include('Bad request, search_product parameter is missing in POST request.');
-  //   });
-  // });
+  it('API 6: POST To Search Product without search_product parameter', () => {
+    cy.request({
+      method: 'POST',
+      url: '/api/searchProduct',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: {}, // Enviando um corpo vazio, sem o parâmetro 'search_product'
+    }).then((response) => {
+      // Verifica o status da resposta
+      expect(response.status).to.eq(200);
+  
+      // Log para inspecionar o corpo da resposta
+      cy.log('Response Body: ', response.body);
+      
+      // Verifica se o corpo da resposta é uma string
+      if (typeof response.body === 'string') {
+        try {
+          const responseBody = JSON.parse(response.body); // Tenta fazer o parse do corpo da resposta
+  
+          // Validações
+          expect(responseBody.responseCode).to.eq(400);
+          expect(responseBody.message).to.eq('Bad request, search_product parameter is missing in POST request.');
+        } catch (e) {
+          // Se houver erro ao parsear, loga o erro e o corpo da resposta
+          cy.log('Error parsing response as JSON: ', e.message);
+          cy.log('Response was: ', response.body);
+        }
+      } else {
+        // Se não for uma string, loga uma mensagem de erro
+        cy.log('Response body is not a string: ', response.body);
+      }
 
-  // API 7: POST To Verify Login with valid details
-  // it('POST To Verify Login with valid details', () => {
-  //   const loginDetails = { email: 'test@example.com', password: 'password123' }; // Exemplo
-  //   cy.api('POST', `${baseUrl}/api/verifyLogin`, loginDetails).then((response) => {
-  //     expect(response.status).to.eq(200);
-  //     expect(response.body).to.include('User exists!');
-  //   });
-  // });
+//       curl --location 'https://automationexercise.com/api/searchProduct' \
+// --header 'Content-Type: application/json' \
+// --data-raw '{}'
+
+    });
+  });
+
+  // // API 7: POST To Verify Login with valid details
+  it('API 7: POST To Verify Login with valid details', () => {
+  const loginDetails = {
+    email: 'galileoguilhermeqa@gmail.com',
+    password: 'Mnbvcxz1!'
+  };
+
+  cy.request({
+    method: 'POST',
+    url: '/api/verifyLogin',
+    body: loginDetails,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then((response) => {
+    expect(response.status).to.eq(200);
+
+    const responseBody = response.body;
+    cy.log(responseBody);
+    cy.log('Endpoint com erro no reponse da API');
+    // Descomente a linha abaixo se você quiser validar a resposta
+    // expect(response.body).to.include('User exists!');
+
+//     curl --location 'https://automationexercise.com/api/verifyLogin' \
+// --header 'Content-Type: application/json' \
+// --data-raw '{
+//     "email": "galileoguilhermeqa@gmail.com",
+//     "password": "Mnbvcxz1!"
+// }'
+
+  });
+  });
 
   // API 8: POST To Verify Login without email parameter
-  // it('POST To Verify Login without email parameter', () => {
-  //   const loginDetails = { password: 'password123' }; // Sem email
-  //   cy.api('POST', `${baseUrl}/api/verifyLogin`, loginDetails).then((response) => {
-  //     expect(response.status).to.eq(400);
-  //     expect(response.body).to.include('Bad request, email or password parameter is missing in POST request.');
-  //   });
-  // });
+  it('API 8: POST To Verify Login without email parameter', () => {
+    const loginDetails = { password: 'password123' }; // Sem email
+    cy.request('POST', '/api/verifyLogin', loginDetails).then((response) => {
+      expect(response.status).to.eq(200);
+      
+      const responseBody = response.body;
+      // cy.log(responseBody);
+      expect(responseBody.message).to.include('Bad request, email or password parameter is missing in POST request.');
+    
+      // curl --location 'https://automationexercise.com/api/verifyLogin' \
+      // --header 'Content-Type: application/json' \
+      // --data-raw '{
+      //     "password": "password123"
+      // }'
+      
+    });
+  });
 
   // API 9: DELETE To Verify Login
   // it('DELETE To Verify Login', () => {

@@ -61,10 +61,10 @@ Antes de começar, você precisará ter instalado em sua máquina:
 </p>
 <hr>
 
-🧪 Testes
+#🧪 Testes
 <br>
 
-# Executa todos os testes com Cypress
+Executa todos os testes com Cypress:
 $ npm run cypress:run
 <hr>
 

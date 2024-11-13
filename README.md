@@ -66,14 +66,14 @@ $ npx cypress open
 # Execute todos os testes no modo headless
 $ npx cypress run
 
-bash
+```
 
 # 🧪 Testes
 Para executar todos os testes automaticamente com Cypress, utilize o seguinte comando:
 
-bash ```
+```bash 
 $ npm run cypress:run
-bash
+```
 
 Isso executará todos os testes especificados e gerará relatórios conforme a configuração.
 

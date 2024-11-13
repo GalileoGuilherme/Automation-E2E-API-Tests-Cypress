@@ -59,3 +59,35 @@ Antes de começar, você precisará ter instalado em sua máquina:
 <p>
   Aqui você encontra detalhes sobre como rodar os testes localmente ou em servidores de CI/CD, organizar múltiplos arquivos de teste, e explorar o uso de relatórios exportados.
 </p>
+<hr>
+
+🧪 Testes
+<br>
+
+# Executa todos os testes com Cypress
+$ npm run cypress:run
+<hr>
+
+💻 Tecnologias/Plugins
+<br>
+
+<ul>
+  <li>Cypress</li>
+  <li>Node.js</li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<hr>
+
+👤 Autor
+<br>
+<ul>
+  <li>Galileo Guilherme</li>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/galileo-guilherme-01996693/">Linkedin</a></li>
+    <li><a href="https://github.com/GalileoGuilherme">GitHub</a></li>
+    <li>Email: galileoguilhermeqa@gmail.com</li>
+  </ul>
+</ul>
+

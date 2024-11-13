@@ -90,4 +90,15 @@ $ npm run cypress:run
     <li>Email: galileoguilhermeqa@gmail.com</li>
   </ul>
 </ul>
+<hr>
+
+📝 Licença
+<br>
+Este projeto está sob a licença MIT 
+<hr>
+
+🔗 Contribuição
+<br>
+<hr>
+
 

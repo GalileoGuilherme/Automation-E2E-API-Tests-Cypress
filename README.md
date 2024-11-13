@@ -5,7 +5,7 @@
 </h2> 
 <p align="center">🔍 Repositório de automação de testes para APIs e interface de usuário (UI)</p> 
 <p align="center"> 
-  <img src="[[[./assets/banner.png](https://miro.medium.com/v2/resize:fit:1200/0*CkYF8pNwANy6rgbp.png)](https://miro.medium.com/v2/resize:fit:1200/0*CkYF8pNwANy6rgbp.png)" alt="Banner do Projeto](https://miro.medium.com/v2/resize:fit:1200/0*CkYF8pNwANy6rgbp.png)"> 
+  <img src="[[[[./assets/banner.png](https://miro.medium.com/v2/resize:fit:1200/0*CkYF8pNwANy6rgbp.png)](https://miro.medium.com/v2/resize:fit:1200/0*CkYF8pNwANy6rgbp.png)" alt="Banner do Projeto](https://miro.medium.com/v2/resize:fit:1200/0*CkYF8pNwANy6rgbp.png)](https://pbs.twimg.com/profile_images/1512090708181725184/KAPAXmDg_400x400.jpg)"> 
 </p> 
 <p align="center"> 
   <a href="https://img.shields.io/github/v/release/seu-usuario/seu-repositorio">Versão</a>

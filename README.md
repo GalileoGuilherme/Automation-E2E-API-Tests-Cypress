@@ -34,7 +34,6 @@
 <li>Licença</li>
 <li>Autor</li>
 </ul>
-<hr>
 
 # 🔍 Sobre
 <br>
@@ -43,7 +42,7 @@
 </p>
 <hr>
 
-🛠 Instalação<br><br>
+# 🛠 Instalação<br><br>
 ⚙️ Pré-requisitos<br>
 Antes de começar, você precisará ter instalado em sua máquina:
 
@@ -52,19 +51,16 @@ Antes de começar, você precisará ter instalado em sua máquina:
   <li><a href="https://nodejs.org/pt/download/prebuilt-installer">Node.js</a></li>
   <li>Um editor para trabalhar com o código, como <a href="https://code.visualstudio.com/download">VSCode</a></li>
 </ul>
-<hr>
 
 # 🚀 Como usar
 <br>
 <ul><li>Aqui você encontra detalhes sobre como rodar os testes localmente ou em servidores de CI/CD, organizar múltiplos arquivos de teste, e explorar o uso de relatórios exportados.</li></ul>
-<hr>
 
 # 🧪 Testes
 <br>
 
 Executa todos os testes com Cypress:
 <ul><li>$ npm run cypress:run</li></ul>
-<hr>
 
 # 💻 Tecnologias/Plugins
 <br>
@@ -76,7 +72,6 @@ Executa todos os testes com Cypress:
   <li></li>
   <li></li>
 </ul>
-<hr>
 
 # 👤 Autor
 <br>
@@ -88,15 +83,12 @@ Executa todos os testes com Cypress:
     <li>Email: galileoguilhermeqa@gmail.com</li>
   </ul>
 </ul>
-<hr>
 
 # 📝 Licença
 <br>
 <ul><li>Este projeto está sob a licença MIT </li></ul>
-<hr>
 
 # 🔗 Contribuição
 <br>
-<hr>
 
 

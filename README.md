@@ -4,15 +4,15 @@
 <ul>
 <li>Sobre</li>
 <li>Tabela de Conteúdo</li>
-Instalação
-Como usar
-Pré-requisitos
-Rodando o Back End
-Testes
-Tecnologias
-Objetivo
-Roadmap
-Contribuição
-Licença
-Autor
+<li>Instalação</li>
+<li>Como usar</li>
+<li>Pré-requisitos</li>
+<li>Rodando o Back End</li>
+<li>Testes</li>
+<li>Tecnologias</li>
+<li>Objetivo</li>
+<li>Roadmap</li>
+<li>Contribuição</li>
+<li>Licença</li>
+<li>Autor</li>
 </ul>

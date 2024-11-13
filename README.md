@@ -70,7 +70,7 @@ Para executar todos os testes automaticamente com Cypress, utilize o seguinte co
 
 $ npm run cypress:run
 Isso executará todos os testes especificados e gerará relatórios conforme a configuração.
-```
+
 
 ### 💻 Tecnologias
 As principais tecnologias e ferramentas usadas neste projeto incluem:

@@ -1,2 +1,2 @@
-# automation-fullstack-tests
- Repositório de automação de testes para APIs e interface de usuário (UI). Inclui casos de teste para validar funcionalidades de backend (APIs) e interações no frontend, proporcionando uma cobertura completa para aplicações fullstack. O projeto abrange práticas de automação, testes de integração e testes end-to-end com CYPRESS.
+automation-E2E-API-Tests-Cypress
+Este repositório contém a automação de testes para APIs e interface de usuário (UI), abrangendo funcionalidades de backend (APIs) e interações no frontend para garantir cobertura completa em aplicações fullstack. O projeto inclui práticas de automação com Cypress, testes de integração e end-to-end, seguindo o padrão de Page Object Model (POM). Também integra processos de CI/CD para execução contínua, geração de relatórios automatizados, e manipulação de banco de dados com Prisma.

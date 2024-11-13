@@ -39,7 +39,7 @@
 🔍 Sobre
 <br>
 <p>
-Repositório de automação de testes para APIs e interface de usuário (UI), com cobertura de funcionalidades de backend (APIs) e interações no frontend, para uma verificação completa de aplicações fullstack. Este projeto utiliza Cypress e abrange automação de testes de integração e end-to-end, implementando o padrão Page Object Model (POM), processos de CI/CD, geração de relatórios e manipulação de banco de dados com Prisma.
+  Repositório de automação de testes para APIs e interface de usuário (UI), com cobertura de funcionalidades de backend (APIs) e interações no frontend, para uma verificação completa de aplicações fullstack. Este projeto utiliza Cypress e abrange automação de testes de integração e end-to-end, implementando o padrão Page Object Model (POM), processos de CI/CD, geração de relatórios e manipulação de banco de dados com Prisma.
 </p>
 <hr>
 
@@ -53,3 +53,9 @@ Antes de começar, você precisará ter instalado em sua máquina:
   <li>Um editor para trabalhar com o código, como VSCode</li>
 </ul>
 <hr>
+
+🚀 Como usar
+<br>
+<p>
+  Aqui você encontra detalhes sobre como rodar os testes localmente ou em servidores de CI/CD, organizar múltiplos arquivos de teste, e explorar o uso de relatórios exportados.
+</p>

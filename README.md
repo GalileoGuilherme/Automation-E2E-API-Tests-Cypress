@@ -10,7 +10,7 @@
 </p>
 
 <p align="center"> 
-  <a href="https://img.shields.io/github/v/release/seu-usuario/seu-repositorio">Versão</a>
+  • <a href="https://img.shields.io/github/v/release/seu-usuario/seu-repositorio">Versão</a>
   • <a href="https://img.shields.io/github/license/seu-usuario/seu-repositorio">Licença</a> 
   • <a href="https://img.shields.io/github/issues/seu-usuario/seu-repositorio">Issues</a> 
   • <a href="https://img.shields.io/github/actions/workflow/status/seu-usuario/seu-repositorio/ci.yml">Status da Build</a> 

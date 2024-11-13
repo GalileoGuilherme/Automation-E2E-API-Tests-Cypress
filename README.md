@@ -75,7 +75,13 @@ Isso executará todos os testes especificados e gerará relatórios conforme a c
 # 💻 Tecnologias
 As principais tecnologias e ferramentas usadas neste projeto incluem:
 
-<ul> <li>Cypress</li> <li>Node.js</li> <li>Prisma</li> <li>CI/CD</li> </ul>
+<ul> 
+  <li>Cypress "13.15.0"</li> 
+  <li>cypress-plugin-api</li>
+  <li>Node.js</li> 
+  <li>Prisma</li> 
+  <li>CI/CD</li> 
+</ul>
 # 🎯 Objetivo
 O objetivo deste projeto é desenvolver uma cobertura de testes automatizados completa para APIs e interfaces de usuário, garantindo a qualidade e funcionalidade da aplicação através de práticas de teste E2E, integração, e validação de componentes front e backend.
 

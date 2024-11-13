@@ -16,6 +16,7 @@
   • <a href="https://img.shields.io/github/actions/workflow/status/seu-usuario/seu-repositorio/ci.yml">Status da Build</a> 
   • <a href="https://img.shields.io/github/test-status/seu-usuario/seu-repositorio">Status dos Testes</a> 
 </p>
+<br>
 
 📋 Conteúdo
 <ul>

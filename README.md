@@ -43,7 +43,7 @@ Repositório de automação de testes para APIs e interface de usuário (UI), co
 </p>
 <hr>
 
-🛠 Instalação<br>
+🛠 Instalação<br><br>
 ⚙️ Pré-requisitos<br>
 Antes de começar, você precisará ter instalado em sua máquina:
 

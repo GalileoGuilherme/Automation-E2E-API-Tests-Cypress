@@ -2,8 +2,8 @@
 
 📋 Conteúdo
 <ul>
-Sobre
-Tabela de Conteúdo
+<li>Sobre</li>
+<li>Tabela de Conteúdo</li>
 Instalação
 Como usar
 Pré-requisitos

@@ -16,3 +16,6 @@
 <li>Licença</li>
 <li>Autor</li>
 </ul>
+
+🔍 Sobre
+Repositório de automação de testes para APIs e interface de usuário (UI), com cobertura de funcionalidades de backend (APIs) e interações no frontend, para uma verificação completa de aplicações fullstack. Este projeto utiliza Cypress e abrange automação de testes de integração e end-to-end, implementando o padrão Page Object Model (POM), processos de CI/CD, geração de relatórios e manipulação de banco de dados com Prisma.

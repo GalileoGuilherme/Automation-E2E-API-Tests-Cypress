@@ -42,7 +42,9 @@
 </p>
 <hr>
 
-# 🛠 Instalação<br><br>
+# 🛠 Instalação
+<br>
+<br>
 ⚙️ Pré-requisitos<br>
 Antes de começar, você precisará ter instalado em sua máquina:
 

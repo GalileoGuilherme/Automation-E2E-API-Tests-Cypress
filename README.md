@@ -90,7 +90,7 @@ O objetivo deste projeto é desenvolver uma cobertura de testes automatizados co
 Para contribuir com este projeto: <ul> <li>Realize um fork do projeto.</li> <li>Crie uma nova branch com suas modificações: git checkout -b minha-branch.</li> <li>Commit suas mudanças: git commit -m 'Minha contribuição'.</li> <li>Envie para a branch original: git push origin minha-branch.</li> <li>Abra um Pull Request explicando suas mudanças.</li> </ul>
 
 # 📝 Licença
-Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença MIT. Consulte o arquivo <a href="https://github.com/GalileoGuilherme/Automation-E2E-API-Tests-Cypress?tab=MIT-1-ov-file">LICENSE</a> para mais detalhes.
 
 # 👤 Autor
 <p>Desenvolvido por Galileo Guilherme</p> <p> <a href="https://www.linkedin.com/in/galileo-guilherme-01996693/">LinkedIn</a> • <a href="https://github.com/GalileoGuilherme">GitHub</a> • Email: galileoguilhermeqa@gmail.com </p>

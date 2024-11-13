@@ -36,14 +36,11 @@
 </ul>
 
 # 🔍 Sobre
-<br>
 <p>
   Repositório de automação de testes para APIs e interface de usuário (UI), com cobertura de funcionalidades de backend (APIs) e interações no frontend, para uma verificação completa de aplicações fullstack. Este projeto utiliza Cypress e abrange automação de testes de integração e end-to-end, implementando o padrão Page Object Model (POM), processos de CI/CD, geração de relatórios e manipulação de banco de dados com Prisma.
 </p>
 
 # 🛠 Instalação
-<br>
-<br>
 ⚙️ Pré-requisitos<br>
 Antes de começar, você precisará ter instalado em sua máquina:
 
@@ -54,18 +51,13 @@ Antes de começar, você precisará ter instalado em sua máquina:
 </ul>
 
 # 🚀 Como usar
-<br>
 <ul><li>Aqui você encontra detalhes sobre como rodar os testes localmente ou em servidores de CI/CD, organizar múltiplos arquivos de teste, e explorar o uso de relatórios exportados.</li></ul>
 
 # 🧪 Testes
-<br>
-
 Executa todos os testes com Cypress:
 <ul><li>$ npm run cypress:run</li></ul>
 
 # 💻 Tecnologias/Plugins
-<br>
-
 <ul>
   <li>Cypress</li>
   <li>Node.js</li>
@@ -75,7 +67,6 @@ Executa todos os testes com Cypress:
 </ul>
 
 # 👤 Autor
-<br>
 <ul>
   <li>Galileo Guilherme</li>
   <ul>
@@ -86,10 +77,9 @@ Executa todos os testes com Cypress:
 </ul>
 
 # 📝 Licença
-<br>
 <ul><li>Este projeto está sob a licença MIT </li></ul>
 
 # 🔗 Contribuição
-<br>
+*******
 
 

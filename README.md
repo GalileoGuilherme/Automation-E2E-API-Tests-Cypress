@@ -48,9 +48,9 @@
 Antes de começar, você precisará ter instalado em sua máquina:
 
 <ul>
-  <li>Git</li>
-  <li>Node.js</li>
-  <li>Um editor para trabalhar com o código, como VSCode</li>
+  <li><a href="https://git-scm.com/downloads">Git</a></li>
+  <li><a href="https://nodejs.org/pt/download/prebuilt-installer">Node.js</a></li>
+  <li>Um editor para trabalhar com o código, como <a href="https://code.visualstudio.com/download">VSCode</a></li>
 </ul>
 <hr>
 

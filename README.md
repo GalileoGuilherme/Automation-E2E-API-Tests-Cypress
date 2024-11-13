@@ -5,9 +5,9 @@
 </h2> 
 <p align="center">🔍 Repositório de automação de testes para APIs e interface de usuário (UI)</p>
 
-<img alingn="center">
+
 ![Cypress](https://pbs.twimg.com/profile_images/1512090708181725184/KAPAXmDg_400x400.jpg)
-</img>
+
 
 <p align="center"> 
   <a href="https://img.shields.io/github/v/release/seu-usuario/seu-repositorio">Versão</a>

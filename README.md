@@ -64,20 +64,22 @@ $ npx cypress open
 # Execute todos os testes no modo headless
 $ npx cypress run
 
-🧪 Testes
+ ```
+### 🧪 Testes
 Para executar todos os testes automaticamente com Cypress, utilize o seguinte comando:
 
 $ npm run cypress:run
 Isso executará todos os testes especificados e gerará relatórios conforme a configuração.
+```
 
-💻 Tecnologias
+### 💻 Tecnologias
 As principais tecnologias e ferramentas usadas neste projeto incluem:
 
 <ul> <li>Cypress</li> <li>Node.js</li> <li>Prisma</li> <li>CI/CD</li> </ul>
-🎯 Objetivo
+### 🎯 Objetivo
 O objetivo deste projeto é desenvolver uma cobertura de testes automatizados completa para APIs e interfaces de usuário, garantindo a qualidade e funcionalidade da aplicação através de práticas de teste E2E, integração, e validação de componentes front e backend.
 
-🛣️ Roadmap
+### 🛣️ Roadmap
 <ul> <li>Implementação de novos casos de teste para funcionalidades recentemente adicionadas</li> <li>Melhoria na cobertura dos testes E2E</li> <li>Otimização dos relatórios de teste</li> <li>Integração de novos métodos de manipulação de banco de dados</li> </ul>
 🔗 Contribuição
 Para contribuir com este projeto:
@@ -87,8 +89,8 @@ Crie uma nova branch com suas modificações: git checkout -b minha-branch.
 Commit suas mudanças: git commit -m 'Minha contribuição'.
 Envie para a branch original: git push origin minha-branch.
 Abra um Pull Request explicando suas mudanças.
-📝 Licença
+### 📝 Licença
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-👤 Autor
-<p>Desenvolvido por Galileo Guilherme</p> <p> <a href="https://www.linkedin.com/in/galileo-guilherme-01996693/">LinkedIn</a> • <a href="https://github.com/GalileoGuilherme">GitHub</a> • Email: galileoguilhermeqa@gmail.com </p> ```
+### 👤 Autor
+<p>Desenvolvido por Galileo Guilherme</p> <p> <a href="https://www.linkedin.com/in/galileo-guilherme-01996693/">LinkedIn</a> • <a href="https://github.com/GalileoGuilherme">GitHub</a> • Email: galileoguilhermeqa@gmail.com </p>

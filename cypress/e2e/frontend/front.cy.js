@@ -6,13 +6,12 @@ describe('Test Case 1: Register User', () => {
 
   it('should register a new user and delete account', () => {
     // 1. Launch browser
-    // O Cypress já abre o navegador automaticamente
 
     // 2. Navigate to url 'http://automationexercise.com'
     cy.visit('http://automationexercise.com');
     
     // 3. Verify that home page is visible successfully
-    cy.get('h2').should('contain.text', 'Full-Fledged practice website for Automation Engineers');
+    cy.get('.active > :nth-child(1) > h2').should('contain.text', 'Full-Fledged practice website for Automation Engineers');
     
     // 4. Click on 'Signup / Login' button
     cy.get('a[href="/login"]').click();

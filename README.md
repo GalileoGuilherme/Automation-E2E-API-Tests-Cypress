@@ -77,7 +77,7 @@ $ npm run cypress:run
 
 Isso executará todos os testes especificados e gerará relatórios conforme a configuração.
 
-# 💻 Tecnologias
+# 💻 Tecnologias/Plugins
 As principais tecnologias e ferramentas usadas neste projeto incluem: <ul> <li>Cypress "13.15.0"</li> <li>cypress-plugin-api</li> <li>Node.js</li> <li>Prisma</li> <li>CI/CD</li> </ul>
 
 # 🎯 Objetivo

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.863" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-11-18T12:44:13" tests="0" file="cypress\e2e\api\api.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Tests for Automation" timestamp="2024-11-18T12:44:13" tests="10" time="3.843" failures="0">
+    <testcase name="API Tests for Automation API1: Get All Products List" time="1.098" classname="API1: Get All Products List">
+    </testcase>
+    <testcase name="API Tests for Automation API 2: POST To All Products List" time="0.268" classname="API 2: POST To All Products List">
+    </testcase>
+    <testcase name="API Tests for Automation API 3: Get All Brands List" time="0.289" classname="API 3: Get All Brands List">
+    </testcase>
+    <testcase name="API Tests for Automation API 4: PUT To All Brands List" time="0.278" classname="API 4: PUT To All Brands List">
+    </testcase>
+    <testcase name="API Tests for Automation API 5: POST To Search Product without search_product parameter" time="0.279" classname="API 5: POST To Search Product without search_product parameter">
+    </testcase>
+    <testcase name="API Tests for Automation API 6: POST To Search Product without search_product parameter" time="0.260" classname="API 6: POST To Search Product without search_product parameter">
+    </testcase>
+    <testcase name="API Tests for Automation API 7: POST To Verify Login with valid details" time="0.348" classname="API 7: POST To Verify Login with valid details">
+    </testcase>
+    <testcase name="API Tests for Automation API 8: POST To Verify Login without email parameter" time="0.267" classname="API 8: POST To Verify Login without email parameter">
+    </testcase>
+    <testcase name="API Tests for Automation API 9: DELETE To Verify Login" time="0.254" classname="API 9: DELETE To Verify Login">
+    </testcase>
+    <testcase name="API Tests for Automation API 10: POST To Verify Login with invalid details" time="0.397" classname="API 10: POST To Verify Login with invalid details">
+    </testcase>
+  </testsuite>
+</testsuites>

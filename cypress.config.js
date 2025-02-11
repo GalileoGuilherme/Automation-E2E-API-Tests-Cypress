@@ -1,18 +1,23 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://www.automationexercise.com/',
-    // viewportWidth: 1280,
-    // viewportHeight: 720,
     setupNodeEvents(on, config) {
-      //repórteres, manipulação de falhas etc.
+      // A configuração para o Mocha JUnit Reporter deve estar aqui
+      require('cypress-mochawesome-reporter/plugin')(on);
+
+      // Se você estiver usando o Mocha JUnit Reporter também, é importante configurá-lo corretamente
+      const mochaJunitReporter = require('mocha-junit-reporter');
+      on('after:run', (results) => {
+        mochaJunitReporter(results, {
+          // Caminho de onde os relatórios serão salvos
+          mochaFile: 'results/test-output.xml',
+        });
+      });
+
+      return config;
     },
-
-    // Tempo máximo de espera para as ações
-    // defaultCommandTimeout: 10000,
-
-    // Tempo máximo de espera para as páginas carregarem
-    // pageLoadTimeout: 60000,
+    baseUrl: 'https://www.automationexercise.com/',
   },
 });
+

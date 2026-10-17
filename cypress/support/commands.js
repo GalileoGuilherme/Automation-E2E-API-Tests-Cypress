@@ -24,34 +24,24 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-// cypress/support/commands.js
+Cypress.Commands.add('apiRequest', (requestOrMethod, url, body) => {
+  if (typeof requestOrMethod === 'string') {
+    return body === undefined
+      ? cy.request(requestOrMethod, url)
+      : cy.request(requestOrMethod, url, body);
+  }
 
-Cypress.Commands.add('apiRequest', (method, url, body = null) => {
-    return cy.request({
-      method,
-      url,
-      headers: { 'Content-Type': 'application/json' },
-      body,
-      failOnStatusCode: false, // evita que o teste falhe automaticamente
-    });
-  });
-  
-  Cypress.Commands.add('logResponse', (response) => {
-    const responseBody = response.body;
-  
-    // Verifica se a resposta está em formato JSON
-    if (typeof responseBody === 'string') {
-      try {
-        const parsedBody = JSON.parse(responseBody);
-        cy.log(JSON.stringify(parsedBody, null, 2));
-        return parsedBody;
-      } catch (e) {
-        cy.log('Erro ao parsear a resposta como JSON: ', e.message);
-        return responseBody;
-      }
-    } else {
-      cy.log(JSON.stringify(responseBody, null, 2));
-      return responseBody;
-    }
-  });
-  
+  return cy.request(requestOrMethod);
+});
+
+Cypress.Commands.add('logResponse', (response) => {
+  const responseBody = response.body;
+  const contentType = response.headers['content-type'] || '';
+  const isJson = /(?:application|text)\/(?:[\w.+-]*\+)?json/i.test(contentType);
+  const parsedBody = typeof responseBody === 'string' && isJson
+    ? JSON.parse(responseBody)
+    : responseBody;
+  const formattedBody = JSON.stringify(parsedBody, null, 2) || String(parsedBody);
+
+  return cy.log(formattedBody).then(() => parsedBody);
+});

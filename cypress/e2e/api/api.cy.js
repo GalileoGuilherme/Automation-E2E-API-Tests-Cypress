@@ -91,7 +91,7 @@ describe('API Tests for Automation', () => {
     const apiUrl = '/api/searchProduct';
 
     // Faz a requisição sem o parâmetro obrigatório 'search_product'
-    cy.request({
+    cy.apiRequest({
       method: 'POST',
       url: apiUrl,
       headers: {
@@ -129,7 +129,7 @@ describe('API Tests for Automation', () => {
 
   // API 6: POST To Search Product without search_product parameter
   it('API 6: POST To Search Product without search_product parameter', () => {
-    cy.request({
+    cy.apiRequest({
       method: 'POST',
       url: '/api/searchProduct',
       headers: {
@@ -175,7 +175,7 @@ describe('API Tests for Automation', () => {
       password: 'Mnbvcxz1!'
     };
 
-    cy.request({
+    cy.apiRequest({
       method: 'POST',
       url: '/api/verifyLogin',
       body: loginDetails,
@@ -204,12 +204,12 @@ describe('API Tests for Automation', () => {
   // API 8: POST To Verify Login without email parameter
   it('API 8: POST To Verify Login without email parameter', () => {
     const loginDetails = { password: 'password123' }; // Sem email
-    cy.request('POST', '/api/verifyLogin', loginDetails).then((response) => {
+    cy.apiRequest('POST', '/api/verifyLogin', loginDetails).then((response) => {
       expect(response.status).to.eq(200);
 
-      const responseBody = response.body;
-      // cy.log(responseBody);
-      expect(responseBody.message).to.include('Bad request, email or password parameter is missing in POST request.');
+      return cy.logResponse(response).then((responseBody) => {
+        expect(responseBody.message).to.include('Bad request, email or password parameter is missing in POST request.');
+      });
 
       // curl --location 'https://automationexercise.com/api/verifyLogin' \
       // --header 'Content-Type: application/json' \
@@ -222,7 +222,7 @@ describe('API Tests for Automation', () => {
 
   // API 9: DELETE To Verify Login
   it('API 9: DELETE To Verify Login', () => {
-    cy.request({
+    cy.apiRequest({
       method: 'DELETE',
       url: '/api/verifyLogin',
       failOnStatusCode: false
@@ -243,7 +243,7 @@ describe('API Tests for Automation', () => {
   it('API 10: POST To Verify Login with invalid details', () => {
     const loginDetails = { email: 'invalid@example.com', password: 'wrongpassword' };
 
-    cy.request({
+    cy.apiRequest({
       method: 'POST',
       url: '/api/verifyLogin',
       headers: {
